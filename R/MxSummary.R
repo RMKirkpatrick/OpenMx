@@ -970,7 +970,7 @@ mxStandardizeRAMpaths <- function(model, SE=FALSE){
   if(SE){
     if(length(model@constraints)>0){
       msg <- paste("standard errors will not be computed because model '",model@name,"' contains at least one mxConstraint",sep="")
-      warning(msq)
+      warning(msg)
       SE <- FALSE
     }
     if(SE & length(model@output$hessian)==0){
